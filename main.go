@@ -20,6 +20,8 @@ func main() {
 		return
 	}
 
+	result := GenerateAscii(text, banner)
+	fmt.Print(result)
 }
 
 func Usage() {
