@@ -46,7 +46,7 @@ func main() {
 			result += "\n"
 		}
 	}
-	fmt.Println(result) 
+	fmt.Print(result) 
 }
 
 func Usage() {
