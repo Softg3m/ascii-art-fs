@@ -75,3 +75,18 @@ func TestGenerateAscii_InvalidBanner(t *testing.T) {
 	}
 }
 
+//
+// ✅ SPECIAL CHARACTERS (EDGE CASE)
+//
+
+func TestGenerateAscii_SpaceCharacter(t *testing.T) {
+	result := GenerateAscii(" ", "standard")
+
+	if result == "" {
+		t.Error("Expected ASCII output for space character")
+	}
+}
+
+//
+// ✅ OUT-OF-RANGE CHARACTERS
+//
