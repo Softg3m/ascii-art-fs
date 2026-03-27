@@ -1,16 +1,14 @@
 package main
 
 import (
+	"io"
+	"os"
 	"strings"
 	"testing"
 )
 
-func TestGenerateAscii_InvalidBanner(t *testing.T) {
-	result := GenerateAscii("A", "unknownbanner")
+//
+// ✅ BASIC FUNCTIONALITY
+//
 
-	expected := "Error reading banner file"
-
-	if strings.TrimSpace(result) != expected {
-		t.Errorf("Expected %q, got %q", expected, result)
-	}
-}
+f
