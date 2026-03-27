@@ -89,4 +89,12 @@ func TestGenerateAscii_SpaceCharacter(t *testing.T) {
 
 //
 // ✅ OUT-OF-RANGE CHARACTERS
-//
+
+func TestGenerateAscii_InvalidChar(t *testing.T) {
+	result := GenerateAscii("\x01", "standard") // non-printable char
+
+	// Should not crash
+	if result == "" {
+		t.Log("Handled invalid character safely")
+	}
+}
