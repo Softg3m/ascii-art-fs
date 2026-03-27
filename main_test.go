@@ -1,9 +1,6 @@
 package main
 
 import (
-	"io"
-	"os"
-	"strings"
 	"testing"
 )
 
@@ -11,4 +8,10 @@ import (
 // ✅ BASIC FUNCTIONALITY
 //
 
-f
+func TestGenerateAscii_SingleCharacter(t *testing.T) {
+	result := GenerateAscii("A", "standard")
+
+	if result == "" {
+		t.Error("Expected ASCII output, got empty string")
+	}
+}
