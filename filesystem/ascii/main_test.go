@@ -7,8 +7,6 @@ import (
 	"testing"
 )
 
-
-
 func TestGenerateAscii_SingleCharacter(t *testing.T) {
 	result := GenerateAscii("A", "standard")
 
@@ -25,9 +23,7 @@ func TestGenerateAscii_Word(t *testing.T) {
 	}
 }
 
-//
-// ✅ MULTI-LINE INPUT
-//
+// MULTI-LINE INPUT
 
 func TestGenerateAscii_Multiline(t *testing.T) {
 	result := GenerateAscii("A\\nB", "standard")
@@ -39,9 +35,7 @@ func TestGenerateAscii_Multiline(t *testing.T) {
 	}
 }
 
-//
-// ✅ EMPTY INPUT
-//
+//  EMPTY INPUT
 
 func TestGenerateAscii_EmptyString(t *testing.T) {
 	result := GenerateAscii("", "standard")
@@ -51,9 +45,7 @@ func TestGenerateAscii_EmptyString(t *testing.T) {
 	}
 }
 
-//
-// ✅ INVALID BANNER FILE
-//
+//INVALID BANNER
 
 func TestGenerateAscii_InvalidBanner(t *testing.T) {
 	oldStdout := os.Stdout
@@ -73,9 +65,7 @@ func TestGenerateAscii_InvalidBanner(t *testing.T) {
 	}
 }
 
-//
-// ✅ SPECIAL CHARACTERS (EDGE CASE)
-//
+// SPECIAL CHARACTERS (EDGE CASE)
 
 func TestGenerateAscii_SpaceCharacter(t *testing.T) {
 	result := GenerateAscii(" ", "standard")
@@ -85,8 +75,7 @@ func TestGenerateAscii_SpaceCharacter(t *testing.T) {
 	}
 }
 
-//
-// ✅ OUT-OF-RANGE CHARACTERS
+// OUT-OF-RANGE CHARACTERS
 
 func TestGenerateAscii_InvalidChar(t *testing.T) {
 	result := GenerateAscii("\x01", "standard") // non-printable char
